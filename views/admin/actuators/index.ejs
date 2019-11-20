@@ -1,51 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Admin</title>
   <%- include('../../components/imports'); -%>
 </head>
+
 <body>
   <%- include('../../components/navbar'); -%>
 
-  <div>
+  <div style="margin-left: 10%;">
     <div>
       <h1>Administração de Ativadores</h1>
     </div>
 
-    <div>
-      <a href="/admin/actuators/create">Novo</a>
-    </div>
+    <a href="/admin/actuators/create">
+      <div class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+        Novo
+      </div>
+    </a>
 
-    <div>
-      <table>
+    <div style="margin-top: 1rem;">
+      <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
         <thead>
           <tr>
             <th>Código</th>
-						<th>Nome</th>
-						<th>Status</th>
+            <th>Nome</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
           <% actuators.forEach((actuator) => { %>
-            <tr>
-              <td><%= actuator.id %></td>
-							<td><%= actuator.name %></td>
-							<!-- <td><%= actuator.status ? "Ligado" : "Desligado" %></td> -->
-							<td>
-                <form action="/admin/actuators/<%= actuator.id %>" method="POST">
-                  <button type="submit">
-                    <%= actuator.status ? 'Ligado' : 'Desligado' %>
-                  </button>
-                </form>
-              </td>
-            </tr>
+          <tr>
+            <td><%= actuator.id %></td>
+            <td><%= actuator.name %></td>
+            <!-- <td><%= actuator.status ? "Ligado" : "Desligado" %></td> -->
+            <td>
+              <form action="/admin/actuators/<%= actuator.id %>" method="POST">
+                <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                  <%= actuator.status ? 'Ligado' : 'Desligado' %>
+                </button>
+              </form>
+            </td>
+          </tr>
           <% }); %>
-          
+
         </tbody>
       </table>
     </div>
   </div>
-  
+
 </body>
+
 </html>

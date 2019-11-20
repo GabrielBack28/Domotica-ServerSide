@@ -7,7 +7,7 @@
 </head>
 <body>
   <%- include('../../components/navbar'); -%>
-  <div>
+  <!-- <div>
     <div>
       <h1>Cadastrar</h1>
 		</div>
@@ -33,6 +33,36 @@
         </div>
       </form>
     </div>
+  </div> -->
+
+
+  <div class="mdl-grid" style="margin-left: 40%; width: 20%; margin-top: 10rem">
+    <form action="create" method="POST">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+          <h2 class="mdl-card__title-text">CADASTRAR</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" name="actuatorName" type="text" id="actuatorName">
+            <label class="mdl-textfield__label" for="actuatorName">Nome</label>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <label class="" for="actuatorStatus">Status</label>
+            <select class="" name="actuatorStatus" id="actuatorStatus">
+							<option value="on">Ligado</option> 
+  						<option value="off" selected>Desligado</option>
+						</select>
+          </div>
+
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">Cadastrar</button>
+        </div>
+      </div>
+    </form>
   </div>
+
 </body>
 </html>

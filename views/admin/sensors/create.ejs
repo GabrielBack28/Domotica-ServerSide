@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Admin - Create Post</title>
   <%- include('../../components/imports'); -%>
 </head>
+
 <body>
   <%- include('../../components/navbar'); -%>
-  <div>
-    <div>
-      <h1>Cadastrar</h1>
-		</div>
-		
-    <div>
-      <form action="create" method="POST">
-        <di>
-          <div>
-            <label for="sensorName">Nome</label>
-            <input name="sensorName" type="text" id="sensorName" placeholder="Nome do sensor">
+
+
+  <div class="mdl-grid" style="margin-left: 40%; width: 20%; margin-top: 10rem">
+    <form action="create" method="POST">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+          <h2 class="mdl-card__title-text">CADASTRAR SENSOR</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" name="sensorName" type="text" id="sensorName">
+            <label class="mdl-textfield__label" for="sensorName">Nome</label>
           </div>
         </div>
-        <div>
-          <button type="submit">Salvar</button>
-        </div>
-      </form>
-    </div>
+
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">Salvar</button>
+      </div>
+    </form>
   </div>
 </body>
+
 </html>
