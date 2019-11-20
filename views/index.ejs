@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dispositivos</title>
+  <%- include('./components/imports'); -%>
+</head>
+
+<body>
+
+  <style>
+    .demo-card-wide.mdl-card {
+      margin: 0;
+      width: 100%;
+      margin-top: 2rem;
+    }
+
+    .demo-card-wide>.mdl-card__title {
+      color: #3f51b5;
+      height: 176px;
+    }
+
+    .demo-card-wide>.mdl-card__menu {
+      color: #fff;
+    }
+  </style>
+
+  <%- include('./components/navbar'); -%>
+
+  <div class="mdl-grid">
+    <% sensors.forEach((sensor) => { %>
+    <div class="mdl-cell mdl-cell--6-col">
+
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+          <h2 class="mdl-card__title-text"><%= sensor.id %> - <%= sensor.name %></h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+          <% if (sensor.measurements.length > 0) { %>
+          <p>
+            Temperatura: <%= sensor.measurements[sensor.measurements.length - 1].temperature %>
+          </p>
+
+          <p>
+            Umidade: <%= sensor.measurements[sensor.measurements.length - 1].humidity %>
+          </p>
+
+          <% } else { %>
+          Nenhum valor existente para esse sensor
+          <% } %>
+        </div>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+</body>
+
+</html>

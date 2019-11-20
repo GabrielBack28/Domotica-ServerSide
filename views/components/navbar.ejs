@@ -1,0 +1,61 @@
+<style>
+	.demo-layout-transparent {
+		background: url('../assets/demos/transparent.jpg') center / cover;
+	}
+
+	.demo-layout-transparent .mdl-layout__header,
+	.demo-layout-transparent .mdl-layout__drawer-button {
+		/* This background is dark, so we set text to white. Use 87% black instead if
+         your background is light. */
+		color: white;
+	}
+</style>
+
+<div class="demo-layout mdl-layout mdl-js-layout">
+	<header class="mdl-layout__header mdl-layout__header">
+		<div class="mdl-layout__header-row">
+			<!-- Title -->
+			<span class="mdl-layout-title">Home</span>
+			<!-- Add spacer, to align navigation to the right -->
+			<div class="mdl-layout-spacer"></div>
+			<!-- Navigation -->
+
+		</div>
+	</header>
+	<div class="mdl-layout__drawer">
+		<% if (locals.loggedUser) { %>
+		<nav class="mdl-navigation">
+			<a class="mdl-navigation__link" href="/">Home</a>
+			<a class="mdl-navigation__link" href="/admin/sensors">Sensores</a>
+			<a class="mdl-navigation__link" href="/admin/actuators">Ativadores</a>
+			<% } %>
+			<% if (locals.loggedUser) { %>
+
+			<div class="mdl-navigation">
+				<a class="mdl-navigation__link">
+					<img src="<%= `/images/${locals.loggedUser.image}` %>" class="rounded" width="35px">
+					<%= locals.loggedUser.name %>
+				</a>
+			</div>
+
+			<div class="mdl-navigation">
+				<li style="list-style-type: none;">
+					<a class="mdl-navigation__link" href="/auth/logout">
+						sair
+					</a>
+				</li>
+			</div>
+			<% } else { %>
+			<div class="mdl-navigation">
+				<li style="list-style-type: none;">
+					<a class="mdl-navigation__link" href="/auth/login">
+						Entrar
+					</a>
+				</li>
+			</div>
+			<% } %>
+			<main class="mdl-layout__content">
+			</main>
+	</div>
+
+	</nav>

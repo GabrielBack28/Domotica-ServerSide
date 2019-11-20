@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Create Post</title>
+  <%- include('../../components/imports'); -%>
+</head>
+<body>
+  <%- include('../../components/navbar'); -%>
+  <div>
+    <div>
+      <h1>Cadastrar</h1>
+		</div>
+		
+    <div>
+      <form action="create" method="POST">
+        <div>
+          <div>
+            <label for="actuatorName">Nome</label>
+            <input name="actuatorName" type="text"id="actuatorName" placeholder="Nome do ativador">
+          </div>
+  
+          <div>
+            <label for="actuatorStatus">Situação</label>
+            <select name="actuatorStatus" id="actuatorStatus">
+							<option value="on">Ligado</option> 
+  						<option value="off" selected>Desligado</option>
+						</select>
+          </div>
+        </div>
+        <div>
+          <button type="submit">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

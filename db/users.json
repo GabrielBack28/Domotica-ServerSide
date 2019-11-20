@@ -1,0 +1,14 @@
+[
+  {
+    "email": "douglas@admin.com",
+    "image": "douglas.jpg",
+    "name": "Douglas",
+    "password": "0192023a7bbd73250516f069df18b500"
+  },
+  {
+    "email": "gabriel@admin.com",
+    "image": "gabriel.jpg",
+    "name": "Gabriel",
+    "password": "0192023a7bbd73250516f069df18b500"
+  }
+]

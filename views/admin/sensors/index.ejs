@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Admin</title>
+  <%- include('../../components/imports'); -%>
+</head>
+
+<body>
+  <%- include('../../components/navbar'); -%>
+
+  <div>
+    <div>
+      <h1>Administração de Sensores</h1>
+    </div>
+
+    <a href="/admin/sensors/create" style="margin-left: 10%;">
+      <div class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+        Novo
+      </div>
+    </a>
+
+    <div style="margin-left: 10%; margin-top: 1rem;" >
+      <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Data</th>
+            <th>Temperatura</th>
+            <th>Umidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% sensors.forEach((sensor) => { %>
+          <tr>
+            <td><%= sensor.id %></td>
+            <td><%= sensor.name %></td>
+            <td>
+              <%= sensor.measurements.length > 0 ? sensor.measurements[sensor.measurements.length - 1].date : 'Sem data' %>
+            </td>
+            <td>
+              <%= sensor.measurements.length > 0 ? sensor.measurements[sensor.measurements.length - 1].temperature : 'Sem temperatura' %>
+            </td>
+            <td>
+              <%= sensor.measurements.length > 0 ? sensor.measurements[sensor.measurements.length - 1].humidity : 'Sem umidade' %>
+            </td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+
+</html>
