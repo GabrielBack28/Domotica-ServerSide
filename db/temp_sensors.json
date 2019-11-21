@@ -9,38 +9,5 @@
                 "humidity": "62.30"
             }
         ]
-    },
-    {
-        "id": 2,
-        "name": "Temperatura e Umidade da Cozinha",
-        "measurements": [
-            {
-                "date": "11/12/2019, 11:57:55 AM",
-                "temperature": "26.10",
-                "humidity": "78.70"
-            }
-        ]
-    },
-    {
-        "id": 3,
-        "name": "Temperatura e Umidade do Quarto",
-        "measurements": [
-            {
-                "date": "11/12/2019, 11:57:55 AM",
-                "temperature": "26.10",
-                "humidity": "78.70"
-            }
-        ]
-    },
-    {
-        "id": 4,
-        "name": "Temperatura e Umidade do Escritório",
-        "measurements": [
-            {
-                "date": "11/12/2019, 11:57:55 AM",
-                "temperature": "21.00",
-                "humidity": "50.00"
-            }
-        ]
     }
 ]
