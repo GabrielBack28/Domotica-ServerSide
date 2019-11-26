@@ -1,13 +1,13 @@
 [
-    {
-        "id": 1,
-        "name": "Temperatura e Umidade da Sala",
-        "measurements": [
-            {
-                "date": "2019-11-19 22:34:26",
-                "temperature": "25.40",
-                "humidity": "62.30"
-            }
-        ]
-    }
+  {
+    "id": 1,
+    "name": "Temperatura e Umidade da Sala",
+    "measurements": [
+      {
+        "date": "2019-11-19 22:34:26",
+        "temperature": "25.40",
+        "humidity": "62.30"
+      }
+    ]
+  }
 ]
